@@ -32,6 +32,58 @@ Classe que representa um funcionário da empresa, contendo:
 - **Getters/Setters**: Métodos para acessar e modificar os atributos
 - **toString()**: Formata e exibe as informações do funcionário
 
+#### 🔒 Encapsulamento dos Atributos
+
+A classe `Funcionario` implementa o conceito de **encapsulamento**, um dos pilares da Programação Orientada a Objetos (POO). Todos os atributos da classe são declarados com o modificador de acesso `private`, garantindo que não possam ser acessados diretamente de fora da classe.
+
+**Atributos Encapsulados:**
+```java
+private String nome;         // Nome completo do funcionário
+private int idade;           // Idade em anos
+private String cargo;        // Cargo/função exercida na empresa
+private double salario;      // Salário em reais
+private String departamento; // Departamento onde trabalha
+```
+
+**Benefícios do Encapsulamento:**
+
+1. **Proteção de Dados**: Os atributos privados impedem acesso direto e modificações indevidas
+2. **Controle de Acesso**: Apenas métodos da própria classe podem modificar os atributos diretamente
+3. **Flexibilidade**: Permite alterar a implementação interna sem afetar outras partes do código
+4. **Manutenibilidade**: Facilita a adição de validações futuras nos métodos setter
+5. **Segurança**: Previne acessos acidentais que possam comprometer a integridade dos dados
+
+**Métodos de Acesso (Getters):**
+- `getNome()` - Retorna o nome do funcionário
+- `getIdade()` - Retorna a idade do funcionário
+- `getCargo()` - Retorna o cargo do funcionário
+- `getSalario()` - Retorna o salário do funcionário
+- `getDepartamento()` - Retorna o departamento do funcionário
+
+**Métodos Modificadores (Setters):**
+- `setNome(String nome)` - Define o nome do funcionário
+- `setIdade(int idade)` - Define a idade do funcionário
+- `setCargo(String cargo)` - Define o cargo do funcionário
+- `setSalario(double salario)` - Define o salário do funcionário
+- `setDepartamento(String departamento)` - Define o departamento do funcionário
+
+**Exemplo de Uso do Encapsulamento:**
+```java
+// Criar um funcionário (usa o construtor)
+Funcionario funcionario = new Funcionario("João Silva", 28, "Desenvolvedor", 4500, "TI");
+
+// Acessar dados usando getters (forma correta)
+String nome = funcionario.getNome();
+int idade = funcionario.getIdade();
+
+// Modificar dados usando setters (forma correta)
+funcionario.setSalario(5000);
+funcionario.setCargo("Desenvolvedor Sênior");
+
+// Tentar acessar diretamente causaria erro de compilação:
+// funcionario.nome = "Novo Nome"; // ❌ ERRO: atributo privado não acessível
+```
+
 ### `Programa.java`
 Classe principal que controla o sistema, incluindo:
 - **Menu interativo**: Interface de console para o usuário
@@ -119,7 +171,9 @@ O sistema inicia com 7 funcionários de exemplo:
 - **Linguagem**: Java
 - **Estrutura de dados**: ArrayList
 - **Entrada/Saída**: Scanner (console)
-- **Paradigma**: Programação Orientada a Objetos
+- **Paradigma**: Programação Orientada a Objetos (POO)
+- **Encapsulamento**: Atributos privados com getters e setters públicos
+- **Modificadores de Acesso**: Uso de `private` para atributos e `public` para métodos
 - **Busca**: Case-insensitive (ignora maiúsculas/minúsculas)
 - **Validação**: Limpeza automática de buffer do Scanner
 
@@ -128,7 +182,10 @@ O sistema inicia com 7 funcionários de exemplo:
 Este projeto exemplifica os seguintes conceitos de programação:
 
 - ✅ **Classes e Objetos**: Modelagem de entidades do mundo real
-- ✅ **Encapsulamento**: Uso de getters e setters
+- ✅ **Encapsulamento**: Implementação completa com atributos privados e métodos de acesso (getters/setters)
+  - Atributos protegidos com modificador `private`
+  - Acesso controlado através de métodos públicos
+  - Separação entre interface pública e implementação interna
 - ✅ **Coleções**: Manipulação de ArrayList
 - ✅ **Estruturas de Controle**: Loops e condicionais
 - ✅ **Tratamento de Entrada**: Uso correto do Scanner

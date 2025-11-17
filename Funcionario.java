@@ -9,11 +9,11 @@
 public class Funcionario {
 
     // Atributos da classe - informações básicas do funcionário
-    String nome;         // Nome completo do funcionário
-    int idade;           // Idade em anos
-    String cargo;        // Cargo/função exercida na empresa
-    double salario;      // Salário em reais
-    String departamento; // Departamento onde trabalha
+    private String nome;         // Nome completo do funcionário
+    private int idade;           // Idade em anos
+    private String cargo;        // Cargo/função exercida na empresa
+    private double salario;      // Salário em reais
+    private String departamento; // Departamento onde trabalha
 
     /**
      * Construtor da classe Funcionario
@@ -130,10 +130,11 @@ public class Funcionario {
      * @return String formatada com todas as informações do funcionário
      */
     public String toString() {
-        return "Nome: " + nome +                    // Exibe o nome
-               "\nIdade: " + idade +                // Exibe a idade
-               "\nCargo: " + cargo +                // Exibe o cargo
-               "\nSalário: R$" + salario +          // Exibe o salário formatado
-               "\nDepartamento: " + departamento;   // Exibe o departamento
+        return "Nome " + nome +                    // Exibe o nome
+               "\nIdade " + idade +                // Exibe a idade
+               "\nCargo " + cargo +                // Exibe o cargo
+               "\nSalario R " + salario +          // Exibe o salário formatado
+               "\nDepartamento " + departamento;   // Exibe o departamento
     }
 }
+
